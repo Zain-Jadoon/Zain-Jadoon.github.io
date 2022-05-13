@@ -1,0 +1,50 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding:0px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html, body{
+	font-family: 'Iosevka Web';
+
+	font-weight: 300;
+	background-color:#101414;
+}
+body{
+	overflow-x:hidden;
+}
+header{
+	height: 100vh;
+	width: 100vw;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
+
+}
+section{
+	/*linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), */  
+	height:100vh;
+	background-position:center;
+}
+
+p{
+	color:#ebdbb2;
+	font-family: "Iosevka Web";
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #282828; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #cc241d; 
+}
