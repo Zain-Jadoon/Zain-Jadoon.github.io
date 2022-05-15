@@ -3,7 +3,6 @@
 *** (C) ZACH COLE 2016
 **/
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
 /* UNIVERSAL */
 
@@ -21,7 +20,7 @@ body {
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
   color: #333447;
   line-height: 1.5;
 }
@@ -33,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -179,8 +178,7 @@ p {
 }
 
 .hidden-sm {
-  display: none;
-}
+  display: none; }
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {

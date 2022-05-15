@@ -8,7 +8,7 @@
 }
 
 html, body{
-	font-family: 'Iosevka Web';
+	font-family: 'Roboto Mono';
 
 	font-weight: 300;
 	background-color:#101414;
@@ -34,7 +34,7 @@ section{
 
 p{
 	color:#ebdbb2;
-	font-family: "Iosevka Web";
+	font-family: "Roboto Mono";
 }
 
 ::-webkit-scrollbar {
@@ -48,3 +48,13 @@ p{
 ::-webkit-scrollbar-thumb {
   background: #cc241d; 
 }
+
+.sub-heading {
+	color: #01ace9;
+	text-align: center;
+	font-weight: 300;
+	margin-top: 1rem;
+}
+
+
+
