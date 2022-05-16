@@ -20,7 +20,7 @@ body {
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-family: 'Lato', Helvetica, sans-serif;
   color: #333447;
   line-height: 1.5;
 }
@@ -33,6 +33,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+  font-family: "Ubuntu";
 }
 
 h3 {
@@ -53,7 +54,7 @@ h6 {
 
 p {
   font-size: 1.125rem;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.8;
 }
 
@@ -178,7 +179,8 @@ p {
 }
 
 .hidden-sm {
-  display: none; }
+  display: none;
+}
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {

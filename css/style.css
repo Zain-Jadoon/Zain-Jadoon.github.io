@@ -27,7 +27,7 @@ canvas {
 
 }
 section{
-	/*linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), */  
+	background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)),url("img/nj-statehouse.jpg");
 	height:100vh;
 	background-position:center;
 }
@@ -47,7 +47,7 @@ p{
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #cc241d; 
+  background: #01ace9; 
 }
 
 .sub-heading {
@@ -57,12 +57,10 @@ p{
 	margin-top: 1rem;
 }
 .about-me-text{
-	text-align: left;
-	max-width:100rem;
+    width:80%;
+    margin-right: auto;
+    margin-left:auto;
 }
-.about-me-paragaph{
-	width:50%;
+.section-about{
+    padding-top:3rem;
 }
-
-
-
