@@ -20,7 +20,7 @@ body {
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: 'Roboto Mono', Helvetica, sans-serif;
   color: #333447;
   line-height: 1.5;
 }
@@ -54,6 +54,7 @@ h6 {
 
 p {
   font-size: 1.125rem;
+  font-family: 'Lato', monospace;
   font-weight: 300;
   line-height: 1.8;
 }
