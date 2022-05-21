@@ -54,8 +54,8 @@ p{
 	color: #01ace9;
 	text-align: center;
 	font-weight: 300;
-	margin-top: .5rem;
-	padding-top: 1rem;
+	margin-top: 1rem;
+	padding-top: .5rem;
 }
 .pfp{
 	display: block;
@@ -75,6 +75,7 @@ p{
 	min-height:100vh;
 	min-width: 100vw;
 	background-position:center;
+	background-color:#FFFFFF;
 }
 h3{
 	text-align: center;
@@ -92,8 +93,4 @@ ion-icon{
 	color:#01ace9;
 	padding-left:42%;
 	padding-right: auto;
-}
-.flex{
-	display:grid;
-	place-items:center;
 }
