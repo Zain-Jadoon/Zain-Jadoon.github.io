@@ -105,9 +105,13 @@ ion-icon{
 }
 .reviews div p{
 	text-align:center;
-	margin-top:5rem;
+	padding-top: 13%;
+
 }
 .wrap{
 	color:#01ace9;
 	font-size:1.5rem;
+}
+.third{
+	padding-bottom: 1em;
 }
