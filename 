@@ -55,23 +55,7 @@
 
 			</div>
 		</section>
-		<section class="reviews">
-			
-			<h2>What People have to say about me</h2> 
-			<div>
-
-<p>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1" class="typewrite" data-period="2000" data-type='["Zain is very intelligent and is a very nice person. - A real one", "He is an utter piece of shit and not even the trash can would accept him. The only means of cleansing Zain from this world would be incineration. -Average League Player",
-	  "Disappointed with customer service. There is no customer contact so I could not get a refund. Will not be buying from here again. -Fellow Confused Programmer", "He is a cool person. - Cool Person","amogus amogus amogus amogus amogus amogus amogus amogus amogus amogus amogus amogus amogus amogus -Mentally Sane Person "]'>
-    <span class="wrap"></span>
-  </a>
-</p>
-
-
-			<div>
-		</section>
 		<script src="js/pong.js"></script>
-		<script src="js/typewriter.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>

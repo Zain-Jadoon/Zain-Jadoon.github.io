@@ -1,10 +1,9 @@
 *{
 	box-sizing: border-box;
 	margin: 0px;
-	padding:0px;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	padding:0px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+	text-decoration:none;
 }
 
 html, body{
@@ -50,7 +49,7 @@ p{
   background: #01ace9; 
 }
 
-.sub-heading {
+h2 {
 	color: #01ace9;
 	text-align: center;
 	font-weight: 300;
@@ -66,8 +65,7 @@ p{
 .about-me-text{
     width:60%;
     margin-right: auto;
-    margin-left:auto;
-}
+    margin-left:auto; }
 .section-about{
     padding-top: 4rem;
 }
@@ -96,4 +94,20 @@ ion-icon{
 .flex{
 	display:grid;
 	place-items:center;
+}
+.reviews{
+	min-height:50%;
+}
+.reviews div{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%
+}
+.reviews div p{
+	text-align:center;
+	margin-top:5rem;
+}
+.wrap{
+	color:#01ace9;
+	font-size:1.5rem;
 }

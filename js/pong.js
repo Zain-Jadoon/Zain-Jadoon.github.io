@@ -2,7 +2,6 @@
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-
 const height = canvas.clientHeight; 
 const width = canvas.clientWidth; 
 
