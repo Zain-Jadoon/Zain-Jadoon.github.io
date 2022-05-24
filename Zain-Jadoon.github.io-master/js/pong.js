@@ -32,7 +32,8 @@ function constructPaddle(x){
 		width: .0083 * width,
 		height: .16 * height,
 		ve: speed,
-		color: "#c7cccb",
+		//color: "#c7cccb",
+		color:"#048a81",
 		dormant: false,
 	}
 	
@@ -107,9 +108,8 @@ function paddleAI(paddle){
 		paddle.y = paddle.y - paddle.ve;
 	}
 }
-
 function drawText(){
-	ctx.fillStyle = "#01ace9";
+	ctx.fillStyle = "#048a81";
 	const fontSize = .0338 * width;
 	ctx.font = "300 " + fontSize + "px Ubuntu";
 	ctx.textAlign = "center";
@@ -133,7 +133,7 @@ const Ball = {
 	height:.0156 * Math.max(width, height),
 	ve_x: ballDirection(speed),
 	ve_y: ballDirection(speed),
-	color: "#01ace9",
+	color: "#EE6352",
 	initial: true
 }
 

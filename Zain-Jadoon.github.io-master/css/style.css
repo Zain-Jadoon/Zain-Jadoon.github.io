@@ -1,3 +1,17 @@
+:root {
+  /*--accent: #01ace9;
+  --background: #101414;
+  --text:
+  */
+  --accent: #048A81;
+
+  --background: #FFF;
+  
+
+  /*--text:#252422;*/
+  --text:#353535;
+
+}
 *{
 	box-sizing: border-box;
 	margin: 0px;
@@ -10,7 +24,7 @@ html, body{
 	font-family: 'Roboto Mono';
 
 	font-weight: 300;
-	background-color:#101414;
+	background-color:var(--background);
 } body{
 	overflow-x:hidden;
 }
@@ -27,13 +41,14 @@ canvas {
 
 }
 .section-about{
-	background-image: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)),url("img/nj-statehouse.jpg");
-	min-height:100vh;
+	background-image: linear-gradient(rgba(244,224,237, 0.75), rgba(244,244,237, 0.75)),url("img/nj-statehouse.jpg");
+	/*background-image: linear-gradient(rgba(244,224,237, 0.7), rgba(244,244,237, 0.7)),url("img/nj-statehouse.jpg");
+	*/min-height:100vh;
 	background-position:center;
 }
 
 p{
-	color:#ebdbb2;
+	color:var(--text);
 }
 
 ::-webkit-scrollbar {
@@ -41,15 +56,15 @@ p{
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #282828; 
+  box-shadow: inset 0 0 5px var(--background); 
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #01ace9; 
+  background: var(--accent); 
 }
 
 h2 {
-	color: #01ace9;
+	color: var(--accent);
 	text-align: center;
 	font-weight: 300;
 	margin-top: .5rem;
@@ -75,7 +90,7 @@ h2 {
 }
 h3{
 	text-align: center;
-	color:#01ace9;
+	color:var(--accent);
 	padding-bottom: 1rem;
 }
 .skills-sentence{
@@ -86,13 +101,9 @@ h3{
 }
 ion-icon{
 	font-size: 50px;
-	color:#01ace9;
+	color:var(--accent);
 	padding-left:42%;
 	padding-right: auto;
-}
-.flex{
-	display:grid;
-	place-items:center;
 }
 .reviews{
 	min-height:50vh;
@@ -108,7 +119,7 @@ ion-icon{
 
 }
 .wrap{
-	color:#01ace9;
+	color:var(--accent);
 	font-size:1.5rem;
 }
 .third{
@@ -135,17 +146,32 @@ form {
 .cred input, .message input{
 	margin-bottom: 20px;
 	height:50px;
-	border: 2px solid #01ace9;
-	background-color:#101414;
+	border: 2px solid var(--accent);
+	background-color:var(--background);
 	font-family:'Lato';
 	color:#01ace9;
 
 }
 .message input{
-	width: 96%;
+	width: 60%;
 	margin-left:auto;
 	margin-right:auto;
 }
 .message input{
 	display:block;
+	height: 200px;
+}
+.submit{
+	width:60%;
+	border: 2px solid var(--accent);
+	background-color: var(--background);
+	color:var(--accent);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 50px;
+}
+.submit:hover{
+	background-color: var(--accent);
+	color: #fff;
 }
