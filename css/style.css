@@ -5,7 +5,7 @@
   */
   --accent: #048A81;
 
-  --background: #FFF;
+  --background: #F4F4ED;
   
 
   /*--text:#252422;*/
@@ -174,4 +174,12 @@ form {
 .submit:hover{
 	background-color: var(--accent);
 	color: #fff;
+}
+h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	font-weight: 300;
+	color: var(--accent);
 }
