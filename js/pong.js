@@ -1,18 +1,24 @@
 // canvas setup
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
 const height = canvas.clientHeight; 
 const width = canvas.clientWidth; 
 
-const speed = .005 * height; 
-
+let hor;
 if(width > height){
-	const hor = true; 
+	hor = true; 
 }
 if(height > width){
-	var hor = false;
+	hor = false;
 }
+let speed;
+if(hor){
+	speed = .005 * width; 
+}
+else if(!hor){
+	speed = .005 * height;
+}
+
 console.log(hor);
 // set canvas height and width to the vp if not already set
 function resizeCanvasToDisplaySize(canvas, width, height){
@@ -30,22 +36,21 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
+function updateSize(obj){
+	if(width >= height){
+		obj.width = .0083 * width;
+		obj.height = .16 * height;
+	}
 
-// function to create paddle 
-//function constructPaddle(x){
-//	return {
-//		x: x,
-//		y: (height/2) - (.16 * height),
-//		width: .0083 * width,
-//		height: .16 * height,
-//		ve: speed,
-//		//color: "#c7cccb",
-//		color:"#048a81",
-//		dormant: false,
-//	}
-//	
-//}
-
+	if(height > width){
+		obj.height = .0083 * height;
+		obj.width = .16 * width;
+	}
+}
+function updateBallSize(obj){
+	obj.width = .0156 * Math.max(width, height);
+	obj.height =.0156 * Math.max(width, height);
+}
 function constructPaddle(x){
 	if(width > height){
 	return {
@@ -94,7 +99,6 @@ function drawRect(Rect){
 // moves ball, if the ball and reduces speed by 1/2 if the ball has not yet bounced off a paddle to make sure that the paddle hits the ball
 
 function moveBall(){
-
 	Ball.y += Ball.ve_y;
 	Ball.x += Ball.ve_x
 
@@ -164,25 +168,53 @@ function BallPaddleBouncer(paddle, otherPaddle){
 function paddleAI(paddle){
 	if(width > height){
 	if (Ball.y  >= paddle.y + (1/2 * paddle.height) && paddle.dormant === false) {
-		paddle.y = paddle.y + paddle.ve;
+		if(Ball.x - paddle.x < .5 * width && Ball.x - paddle.x >=0){
+			paddle.y = paddle.y + paddle.ve;
+
+		}
+		else if(paddle.x - Ball.x < width * .5 && paddle.x - Ball.x >=0){
+			paddle.y = paddle.y + paddle.ve;
+		}
 			
 	}
 
 	else if (Ball.y <= paddle.y + (1/2 * paddle.height) && paddle.dormant === false){
-		paddle.y = paddle.y - paddle.ve;
+		if(Ball.x - paddle.x < .5 * width && Ball.x - paddle.x >=0){
+			paddle.y = paddle.y - paddle.ve;
+
+		}
+		else if(paddle.x - Ball.x < width * .5 && paddle.x - Ball.x >=0){
+			paddle.y = paddle.y - paddle.ve;
+		}
 	}
 }
-	if(height > width){
-	if (Ball.x  >= paddle.x + (1/2 * paddle.width) && paddle.dormant === false) {
-		paddle.x = paddle.x + paddle.ve;
+	if(height> width){
+	if (Ball.x  >= paddle.x + (1/2 * paddle.width) && paddle.dormant === false /* &&  add stuff for paddle 2 Ball.x <= .9* height && Ball.x >= .1 *height*/) {
+		if(Ball.y - paddle.y < .5 * height && Ball.y - paddle.y >=0){
+			paddle.x = paddle.x + paddle.ve;
+
+		}
+		else if(paddle.y - Ball.y < height * .5 && paddle.y - Ball.y >=0){
+			paddle.x = paddle.x + paddle.ve;
+		}
 			
 	}
 
-	else if (Ball.x <= paddle.x + (1/2 * paddle.width) && paddle.dormant === false){
-		paddle.x = paddle.x - paddle.ve;
-	}
+	else if (Ball.x <= paddle.x + (1/2 * paddle.width) && paddle.dormant === false /*&& Ball.x <= .9* height && Ball.x >= .1 *height*/){
+		if(Ball.y - paddle.y < .5 * height&& Ball.y - paddle.y >=0){
+			paddle.x = paddle.x - paddle.ve;
 
+		}
+		else if(paddle.y - Ball.y < height* .5 && paddle.y - Ball.y >=0){
+			paddle.x = paddle.x - paddle.ve;
+		}
 	}
+}
+
+
+
+
+
 }
 function drawText(){
 	ctx.fillStyle = "#048a81";
@@ -215,18 +247,13 @@ const Ball = {
 
 // Loop
 
-
 function main(){
 	ctx.clearRect(0,0, width, height); // Clears screen for new frame
 	
-	if (Ball.x <= .2 * width){
-		Paddle_1.dormant = false;
-	}
-	if(Ball.x >=.8 * width){
-		Paddle_2.dormant = false;
-	}
+
 	// draw Objects 
 	drawRect(Ball);
+
 	drawRect(Paddle_1);
 	drawRect(Paddle_2);
 	
@@ -234,7 +261,6 @@ function main(){
 	 moveBall();
 	 paddleAI(Paddle_1);
 	 paddleAI(Paddle_2);	
-
 	 // Ball Collisions with the roof and paddles
 	 paddleBoundsCollisionCorrection(Paddle_1);
 	 paddleBoundsCollisionCorrection(Paddle_2);
@@ -242,12 +268,14 @@ function main(){
 	 BallPaddleBouncer(Paddle_1, Paddle_2);
 	 BallPaddleBouncer(Paddle_2, Paddle_1);
 
+	updateBallSize(Ball);
+	updateSize(Paddle_1);
+	updateSize(Paddle_2);
 	 //drawText();
-	 requestAnimationFrame(main); // asks for functioncall when it is time for re-paint
+	//togglePause();
+	requestAnimationFrame(main); // asks for functioncall when it is time for re-paint
+	
 }
 Ball.initial = true;
 
 main();// runs main function
-
-console.log(height);
-console.log(width);
