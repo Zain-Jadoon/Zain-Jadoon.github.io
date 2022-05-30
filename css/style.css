@@ -5,7 +5,8 @@
   */
   --accent: #048A81;
 
-  --background: #F4F4ED;
+  /*--background: #F4F4ED;*/
+  --background: #FFF;
   
 
   /*--text:#252422;*/
@@ -41,9 +42,9 @@ canvas {
 
 }
 .section-about{
-	background-image: linear-gradient(rgba(244,224,237, 0.75), rgba(244,244,237, 0.75)),url("img/nj-statehouse.jpg");
-	/*background-image: linear-gradient(rgba(244,224,237, 0.7), rgba(244,244,237, 0.7)),url("img/nj-statehouse.jpg");
-	*/min-height:100vh;
+	background-image: linear-gradient(rgba(244,224,237, 0.75), rgba(244,244,237, 0.75)),url("img/glacier.jpg");
+	
+	min-height:100vh;
 	background-position:center;
 }
 

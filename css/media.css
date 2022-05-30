@@ -9,4 +9,28 @@
 		font-size: 2.5rem;
 	}
 }
+@media (min-height: 750px){
+	.section-skills{
+		min-height: 80%;
+	}
+}
 
+@media (min-height: 1000px){
+	.section-skills{
+		min-height: 70%;
+	}
+}
+/*@media(min-aspect-ratio: 12/16) and (min-height:720px){
+	.section-skills{
+		min-height: 70%;
+	}
+}
+*/
+@media (max-width: 425px){
+	.about-me-text{
+		width: 80%;
+	}
+	.reviews div{
+		width: 80%;
+	}
+}

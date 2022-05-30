@@ -277,5 +277,7 @@ function main(){
 	
 }
 Ball.initial = true;
-
+console.log(screen.width)
+console.log(screen.availWidth)
+console.log(screen.availHeight)
 main();// runs main function
