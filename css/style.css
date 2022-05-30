@@ -88,6 +88,10 @@ h2 {
 	min-width: 100vw;
 	background-position:center;
 }
+.col-4 p{
+	text-align: left;
+}
+
 h3{
 	text-align: center;
 	color:var(--accent);

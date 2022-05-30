@@ -4,4 +4,9 @@
 
 	}
 }
+@media (min-width: 500px){
+	h1{
+		font-size: 2.5rem;
+	}
+}
 
