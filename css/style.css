@@ -53,7 +53,8 @@ p{
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width:0.366vw;
+
 }
 
 ::-webkit-scrollbar-track {
@@ -68,21 +69,23 @@ h2 {
 	color: var(--accent);
 	text-align: center;
 	font-weight: 300;
-	margin-top: .5rem;
-	padding-top: 1rem;
+	margin-top: 1vh;
+	padding-top: 2vh;
 }
 .pfp{
 	display: block;
 	margin-left:auto;
 	margin-right: auto;
-	height:10rem;
+	height:25vh;
 }
 .about-me-text{
     width:60%;
     margin-right: auto;
-    margin-left:auto; }
+    margin-left:auto;
+	text-align: justify;
+ }
 .section-about{
-    padding-top: 4rem;
+    padding-top: 9vh;
 }
 .section-skills{
 	min-height:100vh;
@@ -96,7 +99,7 @@ h2 {
 h3{
 	text-align: center;
 	color:var(--accent);
-	padding-bottom: 1rem;
+	padding-bottom: 2vh;
 }
 .skills-sentence{
 	text-align: center;
@@ -105,7 +108,7 @@ h3{
 	padding-top: 2em;
 }
 ion-icon{
-	font-size: 50px;
+  	font-size: clamp(2.8rem, 3.660vw, 3.5rem);
 	color:var(--accent);
 	padding-left:42%;
 	padding-right: auto;
@@ -125,20 +128,21 @@ ion-icon{
 }
 .wrap{
 	color:var(--accent);
-	font-size:1.5rem;
+  	font-size: clamp(1rem,1.757vw, 2rem);
+
 }
 .third{
-	padding-bottom: 1em;
+	padding-bottom: 5vh;
 }
 .section-contact{
 	min-height:100vh;
 }
 .section-contact h2{
 	text-align:center;
-	padding-top:2em;
+	padding-top:4vh;
 }
 form {
-	margin-top:3rem;
+	margin-top:6vh;
 	/*background-color:#FFFFFF;*/
 	margin-left:auto;
 	margin-right:auto;
