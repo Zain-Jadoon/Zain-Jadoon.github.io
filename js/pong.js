@@ -60,7 +60,7 @@ function constructPaddle(x){
 		height: .16 * height,
 		ve: speed,
 		//color: "#c7cccb",
-		color:"#048a81",
+		color:"#077187",
 		dormant: false,
 	}	
 	}
@@ -72,7 +72,7 @@ function constructPaddle(x){
 		width: .16 * width,
 		ve: speed,
 		//color: "#c7cccb",
-		color:"#048a81",
+		color:"#077187",
 		dormant: false,
 		}
 	}
